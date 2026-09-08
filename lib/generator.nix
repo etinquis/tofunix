@@ -8,7 +8,10 @@
   inherit (fullSpec) provider version source spec;
 
   cleanDescription = val:
-    builtins.replaceStrings ["\${"] ["''\${"] (val.description or "");
+    builtins.replaceStrings 
+    [ "\${" "''" ] 
+    [ "''\${" "'''" ] 
+    (val.description or "");
 
   genObjectOptions = typ:
     concatStrings (mapAttrsToList (name: value: ''
