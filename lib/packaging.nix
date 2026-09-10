@@ -25,7 +25,7 @@
 
       unpackPhase = "unzip -o $src";
 
-      nativeBuildInputs = [pkgs.unzip];
+      nativeBuildInputs = [pkgs.unzip pkgs.patchelf];
 
       buildPhase = ":";
 
@@ -34,6 +34,19 @@
         dir=$out/libexec/terraform-providers/${provider-source-address}/${version}/${GOOS}_${GOARCH}
         mkdir -p "$dir"
         mv terraform-* "$dir/"
+
+        # Some registry providers ship DYNAMICALLY-LINKED binaries, which NixOS's 
+        # stub-ld refuses to run ("Could not start dynamically linked executable").
+        # Statically-linked providers are unaffected.
+        # Fix up the ELF interpreter of any dynamically-linked provider binary so 
+        # NixOS can run it.
+        # `patchelf --print-interpreter` fails on static binaries, so they are 
+        # skipped automatically.
+        for bin in "$dir"/terraform-*; do
+          if [ -f "$bin" ] && ${pkgs.patchelf}/bin/patchelf --print-interpreter "$bin" >/dev/null 2>&1; then
+            ${pkgs.patchelf}/bin/patchelf --set-interpreter ${pkgs.glibc}/lib64/ld-linux-x86-64.so.2 "$bin"
+          fi
+        done
       '';
 
       passthru = {
