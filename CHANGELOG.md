@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v3.0.1](https://gitlab.com/TECHNOFAB/tofunix/compare/69fe8f63cf09a1ac5b04aa746021e4cb0623bfb7..v3.0.1) - 2026-10-11
+#### Bug Fixes
+- (**gitlab**) add patch to support newer opentofu versions - ([69fe8f6](https://gitlab.com/TECHNOFAB/tofunix/commit/69fe8f63cf09a1ac5b04aa746021e4cb0623bfb7)) - TECHNOFAB
+
+- - -
+
 ## [v3.0.0](https://gitlab.com/TECHNOFAB/tofunix/compare/c075d3ed9f6444700cd3e17855dd1b8142a45e87..v3.0.0) - 2026-10-09
 #### Features
 - (**generator**) add more meta blocks and attrs than just count - ([decdebb](https://gitlab.com/TECHNOFAB/tofunix/commit/decdebbcb98c27ed1b14e4b40d643e2fa34d6fac)) - [@TECHNOFAB](https://gitlab.com/TECHNOFAB)
