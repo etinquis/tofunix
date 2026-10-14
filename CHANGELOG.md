@@ -2,6 +2,30 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v3.0.1](https://gitlab.com/TECHNOFAB/tofunix/compare/69fe8f63cf09a1ac5b04aa746021e4cb0623bfb7..v3.0.1) - 2026-10-11
+#### Bug Fixes
+- (**gitlab**) add patch to support newer opentofu versions - ([69fe8f6](https://gitlab.com/TECHNOFAB/tofunix/commit/69fe8f63cf09a1ac5b04aa746021e4cb0623bfb7)) - TECHNOFAB
+
+- - -
+
+## [v3.0.0](https://gitlab.com/TECHNOFAB/tofunix/compare/c075d3ed9f6444700cd3e17855dd1b8142a45e87..v3.0.0) - 2026-10-09
+#### Features
+- (**generator**) add more meta blocks and attrs than just count - ([decdebb](https://gitlab.com/TECHNOFAB/tofunix/commit/decdebbcb98c27ed1b14e4b40d643e2fa34d6fac)) - [@TECHNOFAB](https://gitlab.com/TECHNOFAB)
+- allow referencing resources and data themselves - ([795fd5d](https://gitlab.com/TECHNOFAB/tofunix/commit/795fd5d81f0b7a1ff8b033607bc5ced9c58dbe4c)) - [@TECHNOFAB](https://gitlab.com/TECHNOFAB)
+#### Bug Fixes
+- (**generator**) handle providers without resources or data sources - ([add81cb](https://gitlab.com/TECHNOFAB/tofunix/commit/add81cbba50e657dda6abb0c394b76c5cac4da41)) - [@TECHNOFAB](https://gitlab.com/TECHNOFAB)
+- ![BREAKING](https://img.shields.io/badge/BREAKING-red) (**packaging**) rm unused keys from provider json to prevent hash mismatches - ([1e75d4c](https://gitlab.com/TECHNOFAB/tofunix/commit/1e75d4c99663a847ca059ed3401a5fa6f89dd527)) - [@TECHNOFAB](https://gitlab.com/TECHNOFAB)
+- support nested lists and attrsets - ([a6dc882](https://gitlab.com/TECHNOFAB/tofunix/commit/a6dc8820ad280faea8705788be720c895c518feb)) - Daniel Hellstern
+- update provider hashes (see #4) - ([f385472](https://gitlab.com/TECHNOFAB/tofunix/commit/f385472c58c0a181f340c4fd8c680759218f5087)) - [@TECHNOFAB](https://gitlab.com/TECHNOFAB)
+#### Documentation
+- fix dates in changelog - ([c075d3e](https://gitlab.com/TECHNOFAB/tofunix/commit/c075d3ed9f6444700cd3e17855dd1b8142a45e87)) - [@TECHNOFAB](https://gitlab.com/TECHNOFAB)
+#### Miscellaneous Chores
+- (**deps**) lock file maintenance (flake.nix) - ([463d879](https://gitlab.com/TECHNOFAB/tofunix/commit/463d87992809c37ff176a17737fac7531494a0e0)) - Renovate Bot
+- (**deps**) lock file maintenance (nix/repo/flake.nix) - ([56f8320](https://gitlab.com/TECHNOFAB/tofunix/commit/56f8320d9b0af614b826747c48c8e3b1b091b727)) - Renovate Bot
+- (**flakes**) pin flake inputs & use rensa autodiscovery - ([cb92acb](https://gitlab.com/TECHNOFAB/tofunix/commit/cb92acb36f224fb4f7bb04f2327342a7d862bac8)) - [@TECHNOFAB](https://gitlab.com/TECHNOFAB)
+
+- - -
+
 ## [v2.1.0](https://gitlab.com/TECHNOFAB/tofunix/compare/v2.0.0..v2.1.0) - 2025-12-31
 #### Features
 - switch from flake-parts and devenv to rensa ecosystem - ([e322713](https://gitlab.com/TECHNOFAB/tofunix/commit/e3227131c2013389a4e862130ea71a74097444f7)) - [@TECHNOFAB](https://gitlab.com/TECHNOFAB)
